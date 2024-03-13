@@ -1,14 +1,14 @@
-[submodule "lib/lib/libsodium"]
-	path = lib/lib/libsodium
+[submodule "lib/libsodium"]
+	path = lib/libsodium
 	url = https://github.com/stellar/libsodium.git
-[submodule "lib/lib/xdrpp"]
-	path = lib/lib/xdrpp
+[submodule "lib/xdrpp"]
+	path = lib/xdrpp
 	url = https://github.com/xdrpp/xdrpp.git
-[submodule "lib/lib/libmedida"]
-	path = lib/lib/libmedida
+[submodule "lib/libmedida"]
+	path = lib/libmedida
 	url = https://github.com/stellar/medida.git
-[submodule "lib/lib/cereal"]
-	path = lib/lib/cereal
+[submodule "lib/cereal"]
+	path = lib/cereal
 	url = https://github.com/USCiLab/cereal
 [submodule "lib/asio"]
 	path = lib/asio
