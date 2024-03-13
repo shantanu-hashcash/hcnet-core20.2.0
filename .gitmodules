@@ -1,12 +1,12 @@
 [submodule "lib/libsodium"]
 	path = lib/libsodium
-	url = https://github.com/hcnet/libsodium.git
+	url = https://github.com/stellar/libsodium.git
 [submodule "lib/xdrpp"]
 	path = lib/xdrpp
 	url = https://github.com/xdrpp/xdrpp.git
 [submodule "lib/libmedida"]
 	path = lib/libmedida
-	url = https://github.com/hcnet/medida.git
+	url = https://github.com/stellar/medida.git
 [submodule "lib/cereal"]
 	path = lib/cereal
 	url = https://github.com/USCiLab/cereal
@@ -18,7 +18,7 @@
 	url = https://github.com/fmtlib/fmt
 [submodule "lib/tracy"]
 	path = lib/tracy
-	url = https://github.com/hcnet/tracy
+	url = https://github.com/stellar/tracy
 [submodule "lib/spdlog"]
 	path = lib/spdlog
 	url = https://github.com/gabime/spdlog
