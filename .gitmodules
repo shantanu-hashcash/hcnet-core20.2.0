@@ -23,11 +23,12 @@
 	path = lib/spdlog
 	url = https://github.com/gabime/spdlog
 	ignore = dirty
+
 [submodule "src/protocol-next/xdr"]
 	path = src/protocol-next/xdr
-	url = https://github.com/HashCash-Consultants/hcnet-xdr
+	url = https://github.com/HashCash-Consultants/hcnet-xdr.git
 	branch = next
 [submodule "src/protocol-curr/xdr"]
 	path = src/protocol-curr/xdr
-	url = https://github.com/HashCash-Consultants/hcnet-xdr
+	url = https://github.com/HashCash-Consultants/hcnet-xdr.git
 	branch = curr
