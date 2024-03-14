@@ -1,7 +1,7 @@
 soroban-env-host 20.1.1 git+https://github.com/HashCash-Consultants/rs-soroban-env?rev=1f0d10f508c4f3b795e1c829dc0c7108d61bccb1#1f0d10f508c4f3b795e1c829dc0c7108d61bccb1
 ├── tracy-client 0.15.2 checksum:434ecabbda9f67eeea1eab44d52f4a20538afa3e2c2770f2efc161142b25b608
 │   ├── tracy-client-sys 0.21.2 checksum:2cb915ea3af048554640d76dd6f1492589a6401a41a30d789b983c1ec280455a
-│   │   └── cc 1.0.88 checksum:02f341c093d19155a6e41631ce5971aac4e9a868262212153124c15fa22d1cdc
+│   │   └── cc 1.0.90 checksum:8cd6604a82acf3039f1144f54b8eb34e91ffba622051189e71b781822d5ee1f5
 │   ├── once_cell 1.19.0 checksum:3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92
 │   └── loom 0.5.6 checksum:ff50ecb28bb86013e935fb6683ab1f6d3a20016f123c76fd4c27470076ac30f5
 │       ├── tracing-subscriber 0.3.18 checksum:ad0f048c97dbd9faa9b7df56362b8ebcaa52adb06b498c050d2f4e32f90a7a8b
@@ -32,7 +32,7 @@ soroban-env-host 20.1.1 git+https://github.com/HashCash-Consultants/rs-soroban-e
 │       │   │   └── lazy_static 1.4.0 checksum:e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646
 │       │   ├── regex 1.10.3 checksum:b62dbe01f0b06f9d8dc7d49e05a0785f153b00b2c227856282f671e0318c9b15
 │       │   │   ├── regex-syntax 0.8.2 checksum:c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f
-│       │   │   ├── regex-automata 0.4.5 checksum:5bb987efffd3c6d0d8f5f89510bb458559eab11e4f869acb20bf845e016259cd
+│       │   │   ├── regex-automata 0.4.6 checksum:86b83b8b9847f9bf95ef68afb0b8e6cdb80f498442f5179a29fad448fcc1eaea
 │       │   │   │   ├── regex-syntax 0.8.2 checksum:c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f
 │       │   │   │   ├── memchr 2.7.1 checksum:523dc4f511e55ab87b694dc30d0f820d60906ef06413f93d4d7a1385599cc149
 │       │   │   │   └── aho-corasick 1.1.2 checksum:b2969dcb958b36655471fc61f7e416fa76033bdd4bfed0678d8fee1e2d07a1f0
@@ -50,25 +50,20 @@ soroban-env-host 20.1.1 git+https://github.com/HashCash-Consultants/rs-soroban-e
 │       │           └── regex-syntax 0.6.29 checksum:f162c6dd7b008981e4d40210aca20b4bd0f9b60ca9271061b07f78537722f2e1
 │       ├── tracing 0.1.40 checksum:c3523ab5a71916ccf420eebdf5521fcef02141234bbc0b8a49f2fdc4544364ef
 │       ├── scoped-tls 1.0.1 checksum:e1cf6437eb19a8f4a6cc0f7dca544973b0b78843adbfeb3683d1a94a0024a294
-│       ├── generator 0.7.6 checksum:b5b25e5b3e733153bcab35ee4671b46604b42516163cae442d1601cb716f2ac5
-│       │   ├── windows 0.53.0 checksum:efc5cf48f83140dcaab716eeaea345f9e93d0018fb81162753a3f76c3397b538
-│       │   │   ├── windows-targets 0.52.4 checksum:7dd37b7e5ab9018759f893a1952c9420d060016fc19a472b4bb20d1bdd694d1b
-│       │   │   │   ├── windows_x86_64_msvc 0.52.4 checksum:32b752e52a2da0ddfbdbcc6fceadfeede4c939ed16d13e648833a61dfb611ed8
-│       │   │   │   ├── windows_x86_64_gnullvm 0.52.4 checksum:77ca79f2451b49fa9e2af39f0747fe999fcda4f5e241b2898624dca97a1f2177
-│       │   │   │   ├── windows_x86_64_gnu 0.52.4 checksum:5eee091590e89cc02ad514ffe3ead9eb6b660aedca2183455434b93546371a03
-│       │   │   │   ├── windows_i686_msvc 0.52.4 checksum:1515e9a29e5bed743cb4415a9ecf5dfca648ce85ee42e15873c3cd8610ff8e02
-│       │   │   │   ├── windows_i686_gnu 0.52.4 checksum:b474d8268f99e0995f25b9f095bc7434632601028cf86590aea5c8a5cb7801d3
-│       │   │   │   ├── windows_aarch64_msvc 0.52.4 checksum:da9f259dd3bcf6990b55bffd094c4f7235817ba4ceebde8e6d11cd0c5633b675
-│       │   │   │   └── windows_aarch64_gnullvm 0.52.4 checksum:bcf46cf4c365c6f2d1cc93ce535f2c8b244591df96ceee75d8e83deb70a9cac9
-│       │   │   └── windows-core 0.53.0 checksum:9dcc5b895a6377f1ab9fa55acedab1fd5ac0db66ad1e6c7f47e28a22e446a5dd
-│       │   │       ├── windows-targets 0.52.4 checksum:7dd37b7e5ab9018759f893a1952c9420d060016fc19a472b4bb20d1bdd694d1b
-│       │   │       └── windows-result 0.1.0 checksum:cd19df78e5168dfb0aedc343d1d1b8d422ab2db6756d2dc3fef75035402a3f64
-│       │   │           └── windows-targets 0.52.4 checksum:7dd37b7e5ab9018759f893a1952c9420d060016fc19a472b4bb20d1bdd694d1b
+│       ├── generator 0.7.5 checksum:5cc16584ff22b460a382b7feec54b23d2908d858152e5739a120b949293bd74e
+│       │   ├── windows 0.48.0 checksum:e686886bc078bc1b0b600cac0147aadb815089b6e4da64016cbd754b6342700f
+│       │   │   └── windows-targets 0.48.5 checksum:9a2fa6e2155d7247be68c096456083145c183cbbbc2764150dda45a87197940c
+│       │   │       ├── windows_x86_64_msvc 0.48.5 checksum:ed94fce61571a4006852b7389a063ab983c02eb1bb37b47f8272ce92d06d9538
+│       │   │       ├── windows_x86_64_gnullvm 0.48.5 checksum:0b7b52767868a23d5bab768e390dc5f5c55825b6d30b86c844ff2dc7414044cc
+│       │   │       ├── windows_x86_64_gnu 0.48.5 checksum:53d40abd2583d23e4718fddf1ebec84dbff8381c07cae67ff7768bbf19c6718e
+│       │   │       ├── windows_i686_msvc 0.48.5 checksum:8f55c233f70c4b27f66c523580f78f1004e8b5a8b659e05a4eb49d4166cca406
+│       │   │       ├── windows_i686_gnu 0.48.5 checksum:a75915e7def60c94dcef72200b9a8e58e5091744960da64ec734a6c6e9b3743e
+│       │   │       ├── windows_aarch64_msvc 0.48.5 checksum:dc35310971f3b2dbbf3f0690a219f40e2d9afcf64f9ab7cc1be722937c26b4bc
+│       │   │       └── windows_aarch64_gnullvm 0.48.5 checksum:2b38e32f0abccf9987a4e3079dfb67dcd799fb61361e53e2882c3cbaf0d905d8
 │       │   ├── rustversion 1.0.14 checksum:7ffc183a10b4478d04cbbbfc96d0873219d962dd5accaff2ffbd4ceb7df837f4
 │       │   ├── log 0.4.19 checksum:b06a4cde4c0f271a446782e3eff8de789548ce57dbc8eca9292c27f4a42004b4
 │       │   ├── libc 0.2.153 checksum:9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd
-│       │   ├── cfg-if 1.0.0 checksum:baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
-│       │   └── cc 1.0.88 checksum:02f341c093d19155a6e41631ce5971aac4e9a868262212153124c15fa22d1cdc
+│       │   └── cc 1.0.90 checksum:8cd6604a82acf3039f1144f54b8eb34e91ffba622051189e71b781822d5ee1f5
 │       └── cfg-if 1.0.0 checksum:baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
 ├── static_assertions 1.1.0 checksum:a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f
 ├── soroban-wasmi 0.31.1-soroban.20.0.1 git+https://github.com/HashCash-Consultants/wasmi?rev=2329ceae38c43c15607d71474d7be7776f428b3c#2329ceae38c43c15607d71474d7be7776f428b3c
@@ -153,18 +148,18 @@ soroban-env-host 20.1.1 git+https://github.com/HashCash-Consultants/rs-soroban-e
 ├── rand_chacha 0.3.1 checksum:e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88
 │   ├── rand_core 0.6.4 checksum:ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c
 │   │   └── getrandom 0.2.11 checksum:fe9006bed769170c11f845cf00c7c1e9092aeb3f268e007c3e760ac68008070f
-│   │       ├── wasm-bindgen 0.2.91 checksum:c1e124130aee3fb58c5bdd6b639a0509486b0338acaaae0c84a5124b0f588b7f
-│   │       │   ├── wasm-bindgen-macro 0.2.91 checksum:b30af9e2d358182b5c7449424f017eba305ed32a7010509ede96cdc4696c46ed
-│   │       │   │   ├── wasm-bindgen-macro-support 0.2.91 checksum:642f325be6301eb8107a83d12a8ac6c1e1c54345a7ef1a9261962dfefda09e66
-│   │       │   │   │   ├── wasm-bindgen-shared 0.2.91 checksum:4f186bd2dcf04330886ce82d6f33dd75a7bfcf69ecf5763b89fcde53b6ac9838
-│   │       │   │   │   ├── wasm-bindgen-backend 0.2.91 checksum:c9e7e1900c352b609c8488ad12639a311045f40a35491fb69ba8c12f758af70b
-│   │       │   │   │   │   ├── wasm-bindgen-shared 0.2.91 checksum:4f186bd2dcf04330886ce82d6f33dd75a7bfcf69ecf5763b89fcde53b6ac9838
+│   │       ├── wasm-bindgen 0.2.92 checksum:4be2531df63900aeb2bca0daaaddec08491ee64ceecbee5076636a3b026795a8
+│   │       │   ├── wasm-bindgen-macro 0.2.92 checksum:a1f8823de937b71b9460c0c34e25f3da88250760bec0ebac694b49997550d726
+│   │       │   │   ├── wasm-bindgen-macro-support 0.2.92 checksum:e94f17b526d0a461a191c78ea52bbce64071ed5c04c9ffe424dcb38f74171bb7
+│   │       │   │   │   ├── wasm-bindgen-shared 0.2.92 checksum:af190c94f2773fdb3729c55b007a722abb5384da03bc0986df4c289bf5567e96
+│   │       │   │   │   ├── wasm-bindgen-backend 0.2.92 checksum:614d787b966d3989fa7bb98a654e369c762374fd3213d212cfc0251257e747da
+│   │       │   │   │   │   ├── wasm-bindgen-shared 0.2.92 checksum:af190c94f2773fdb3729c55b007a722abb5384da03bc0986df4c289bf5567e96
 │   │       │   │   │   │   ├── syn 2.0.39 checksum:23e78b90f2fcf45d3e842032ce32e3f2d1545ba6636271dcbf24fa306d87be7a
 │   │       │   │   │   │   ├── quote 1.0.33 checksum:5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae
 │   │       │   │   │   │   ├── proc-macro2 1.0.69 checksum:134c189feb4956b20f6f547d2cf727d4c0fe06722b20a0eec87ed445a97f92da
 │   │       │   │   │   │   ├── once_cell 1.19.0 checksum:3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92
 │   │       │   │   │   │   ├── log 0.4.19 checksum:b06a4cde4c0f271a446782e3eff8de789548ce57dbc8eca9292c27f4a42004b4
-│   │       │   │   │   │   └── bumpalo 3.15.3 checksum:8ea184aa71bb362a1157c896979544cc23974e08fd265f29ea96b59f0b4a555b
+│   │       │   │   │   │   └── bumpalo 3.15.4 checksum:7ff69b9dd49fd426c69a0db9fc04dd934cdb6645ff000864d98f7e2af8830eaa
 │   │       │   │   │   ├── syn 2.0.39 checksum:23e78b90f2fcf45d3e842032ce32e3f2d1545ba6636271dcbf24fa306d87be7a
 │   │       │   │   │   ├── quote 1.0.33 checksum:5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae
 │   │       │   │   │   └── proc-macro2 1.0.69 checksum:134c189feb4956b20f6f547d2cf727d4c0fe06722b20a0eec87ed445a97f92da
@@ -172,8 +167,8 @@ soroban-env-host 20.1.1 git+https://github.com/HashCash-Consultants/rs-soroban-e
 │   │       │   └── cfg-if 1.0.0 checksum:baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
 │   │       ├── wasi 0.11.0+wasi-snapshot-preview1 checksum:9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423
 │   │       ├── libc 0.2.153 checksum:9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd
-│   │       ├── js-sys 0.3.68 checksum:406cda4b368d531c842222cf9d2600a9a4acce8d29423695379c6868a143a9ee
-│   │       │   └── wasm-bindgen 0.2.91 checksum:c1e124130aee3fb58c5bdd6b639a0509486b0338acaaae0c84a5124b0f588b7f
+│   │       ├── js-sys 0.3.69 checksum:29c15563dc2726973df627357ce0c9ddddbea194836909d655df6a75d2cf296d
+│   │       │   └── wasm-bindgen 0.2.92 checksum:4be2531df63900aeb2bca0daaaddec08491ee64ceecbee5076636a3b026795a8
 │   │       └── cfg-if 1.0.0 checksum:baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd
 │   └── ppv-lite86 0.2.17 checksum:5b40af805b3121feab8a3c29f04d8ad262fa8e0561883e7653e024ae4479e6de
 ├── rand 0.8.5 checksum:34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404
